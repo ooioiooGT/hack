@@ -1,5 +1,3 @@
-import firebase from "firebase/app";
-import "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 
@@ -14,7 +12,4 @@ const firebaseConfig = {
   };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-// Initialize Firebase authentication and get a reference to the service 
-const auth = getAuth(app);
+const auth = getAuth(app); 
