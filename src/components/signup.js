@@ -21,6 +21,7 @@ const Signup = () => {
         const cred = await signup(emailRef.current.value, passwordRef.current.value)
         db.collection('users').doc(cred.user.uid).set({email:cred.user.email})
         console.log("success signing up")
+        localStorage.setItem("user",JSON.stringify({"email": cred.user.email, "uid": cred.user.uid}))
       }catch{
         alert("The user name aleary exist! ")
       }

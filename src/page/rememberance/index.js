@@ -2,9 +2,13 @@ import React from 'react';
 import Image1 from './image.svg';
 import Memerycard from './memerycard';
 import Placeimage from './placeholder.svg';
-import Memcss from './styles.css'
+import Memcss from './styles.css';
+import {db} from "../../api/firebase";
+
+
 
 function rememberance() {
+
   return (
     <div className='rememberance'>
       <div className='navbar'>
@@ -24,7 +28,7 @@ function rememberance() {
         <div className={Memcss.cardcontainer}>
             <Memerycard 
                 imageurl={Placeimage}
-                name = {"gilber chen "}
+                name = {""}
                 comment = {"sweet girl"}
 
             />
@@ -45,4 +49,4 @@ function rememberance() {
   )
 }
 
-export default rememberance
+export default rememberance;
