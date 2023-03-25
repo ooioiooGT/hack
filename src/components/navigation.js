@@ -5,16 +5,12 @@ import { logout } from "../api/firebase";
 import { async } from "@firebase/util";
 import { Link } from "react-router-dom";
 
-
 function Navigation({ body }) {
-
-  async function handleLogout(){
-    try{
-      await logout()
-      console.log("logout")
-    }catch{
-
-    }
+  async function handleLogout() {
+    try {
+      await logout();
+      console.log("logout");
+    } catch {}
   }
   return (
     <div class={nav.overall}>
@@ -47,9 +43,9 @@ function Navigation({ body }) {
             <a class={nav.item} href="#section">
               Memorials
             </a>
+          </Link>
           <Link to="/">
-          <button onClick={handleLogout}>Log Out </button>
-
+            <button onClick={handleLogout}>Log Out </button>
           </Link>
         </div>
       </div>
