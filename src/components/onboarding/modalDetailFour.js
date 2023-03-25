@@ -42,8 +42,8 @@ function Categories({
           alt="Peaceful Lady"
           first="Back"
           second="Complete"
-          back="/ModalSec"
-          next="/ModalFour"
+          back="/ModalThree"
+          next="/Dashboard"
         />
       </div>
     </div>
