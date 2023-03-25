@@ -5,8 +5,11 @@ import Placeimage from './placeholder.svg';
 import Memcss from './styles.css'
 import Banner from '../../components/topbanner';
 import Navigation from '../../components/navigation';
+import {db} from "../../api/firebase";
+
 
 function rememberance() {
+
   return (
     <Navigation 
      body={
@@ -29,7 +32,7 @@ function rememberance() {
         <div className={Memcss.cardcontainer}>
             <Memerycard 
                 imageurl={Placeimage}
-                name = {"gilber chen "}
+                name = {""}
                 comment = {"sweet girl"}
 
             />
@@ -50,6 +53,4 @@ function rememberance() {
      }/>
   )
 }
-
-
-export default rememberance
+export default rememberance;

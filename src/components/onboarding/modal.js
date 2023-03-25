@@ -12,6 +12,7 @@ function Modal({
   second,
   back,
   next,
+  action
 }) {
   return (
     <body class={modal.modalBody}>
@@ -29,7 +30,7 @@ function Modal({
             <button id={modal.first}>{first}</button>
           </Link>
           <Link to={next}>
-            <button>{second}</button>
+            <button onClick={action}>{second}</button>
           </Link>
         </div>
       </div>
