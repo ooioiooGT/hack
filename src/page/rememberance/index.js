@@ -9,17 +9,24 @@ import {db} from "../../api/firebase";
 
 
 function rememberance() {
+  const [memorials, setMemorials] = useState([])
+  const loaded = useRef(false)
   var user = JSON.parse(localStorage.getItem('user'))
-  db.collection('users').doc(user.uid).collection('relatives').get()
+  useEffect (()=> {
+    if(!loaded.current){
+    const memorialArray = []
+    db.collection('users').doc(user.uid).collection('relatives').get()
   .then((querySnapshot) => {
-    // Loop through the query snapshot and retrieve the relevant fields for each user
     querySnapshot.forEach((doc) => {
       const data = doc.data();
-      const name = data.name;
-      console.log(name)
-
+      memorialArray.push({name: data.name, quote: data.quote})
+      // console.log(data.name)
     });
-  })
+    setMemorials(memorialArray);
+    
+  })}
+  loaded.current = true;
+}, [] )
   return (
     <Navigation 
      body={
@@ -42,8 +49,8 @@ function rememberance() {
         <div className={Memcss.cardcontainer}>
             <Memerycard 
                 imageurl={Placeimage}
-                name = {name}
-                comment = {"sweet girl"}
+                name = {memorials.name}
+                comment = {memorials.quote}
 
             />
             <Memerycard 

@@ -54,23 +54,24 @@ export default function Dashboard() {
                   comment={memorial.quote}
                 />))}
                 
-
-///                  imageurl={elderly}
-///                  name="Jovita Ceron"
-///                  comment="“A faithful woman”"
-///                />
-///                <Memorycard
-///                  class={dash.eachItem}
-///                  imageurl={elderly2}
-///                  name="Larae Murdock"
-///                  comment="“A spiritual woman”"
-///                />
-///                <Memorycard
-///                  class={dash.eachItem}
-///                  imageurl={elderly3}
-///                  name="Segundo Carazas"
-///                  comment="“A happy men”"
-///                />
+                {/* <Memorycard
+                  class={dash.eachItem}
+                  imageurl={elderly}
+                  name="Jovita Ceron"
+                  comment="“A faithful woman”"
+                />
+                <Memorycard
+                  class={dash.eachItem}
+                  imageurl={elderly2}
+                  name="Larae Murdock"
+                  comment="“A spiritual woman”"
+                />
+                <Memorycard
+                  class={dash.eachItem}
+                  imageurl={elderly3}
+                  name="Segundo Carazas"
+                  comment="“A happy men”"
+                /> */}
 
               </div>
             </div>
