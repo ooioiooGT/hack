@@ -23,8 +23,7 @@
   margin: 0 auto;
   grid-gap: 0;
 }
-
-input {
+.subContainer input {
   border: 0;
   padding: 1rem;
   margin: 1rem;

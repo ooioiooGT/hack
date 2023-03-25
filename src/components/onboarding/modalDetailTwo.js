@@ -16,7 +16,7 @@ function Categories({
 }) {
   return (
     <div className="categories">
-      <div className="cards-container">
+      <div className={modal.cardscontainer}>
         <Modal
           title=""
           para="Have you lost a loved one recently?"
