@@ -10,6 +10,11 @@ body {
   width: 80%;
 }
 
+.SignInContainer p {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
 /*The left section*/
 
 .signUp {
@@ -27,7 +32,7 @@ body {
 .logoHeading {
   margin-top: 2rem;
   display: flex;
- 
+
   font-size: 1.5rem;
   align-items: center;
   justify-content: center;
