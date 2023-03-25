@@ -10,8 +10,7 @@ import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import StarsIcon from "@mui/icons-material/Stars";
 import ArticleIcon from "@mui/icons-material/Article";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import LogoutIcon from '@mui/icons-material/Logout';
-
+import LogoutIcon from "@mui/icons-material/Logout";
 
 function Navigation({ body }) {
   async function handleLogout() {
@@ -32,62 +31,59 @@ function Navigation({ body }) {
         </div>
 
         <div class={nav.menuItems}>
+          <Link class={nav.link} to="/Dashboard">
+            <HomeOutlinedIcon style={{ color: "7e6004" }} />
 
-          <Link to="/Dashboard" >
-          <HomeOutlinedIcon  style={{ color: '7e6004' }}/>
-            
             <a class={nav.item} href="#section">
               Home
             </a>
           </Link>
-          <Link to="#" >
-          <FavoriteIcon  style={{ color: '7e6004' }} />
-            
+          <Link to="#">
+            <FavoriteIcon style={{ color: "7e6004" }} />
+
             <a class={nav.item} href="#section">
               Grief Guidance
             </a>
           </Link>
 
-          <Link to="#" >
-          <DriveFileRenameOutlineIcon  style={{ color: '7e6004' }}/>
-            
+          <Link to="#">
+            <DriveFileRenameOutlineIcon style={{ color: "7e6004" }} />
+
             <a class={nav.item} href="#section">
               Grief Journal
             </a>
           </Link>
 
-          <Link to="#" >
-          <PeopleAltIcon  style={{ color: '7e6004' }} />
-            
+          <Link to="#">
+            <PeopleAltIcon style={{ color: "7e6004" }} />
+
             <a class={nav.item} href="#section">
               Community Support
             </a>
           </Link>
 
-          
-          
-    
           <Link to="/MemorialPage">
-          <StarsIcon  style={{ color: '7e6004' }}/>
+            <StarsIcon style={{ color: "7e6004" }} />
             <a class={nav.item} href="#section">
               Memorials
             </a>
           </Link>
 
-          <Link to="#" >
-          <ArticleIcon  style={{ color: '7e6004' }}/>
-            
+          <Link to="#">
+            <ArticleIcon style={{ color: "7e6004" }} />
+
             <a class={nav.item} href="#section">
               Resources Center
             </a>
           </Link>
 
-         
-        
           <Link to="/">
-            <LogoutIcon style={{ color: '7e6004' }}/>
-            
-            <a  style={{ color: '7e6004' }}onClick={handleLogout}> Log Out </a>
+            <LogoutIcon style={{ color: "7e6004" }} />
+
+            <a style={{ color: "7e6004" }} onClick={handleLogout}>
+              {" "}
+              Log Out{" "}
+            </a>
           </Link>
 
           <image src={logo} alt="EaseHeal Logo" />
