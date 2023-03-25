@@ -7,7 +7,7 @@ const Signup = () => {
     <div class={signup.container}>
       <Background />
       <div class={signup.logInPortion}>
-        <h1 id={signup.loginTitle}>Login</h1>
+        <h1 id={signup.loginTitle}>SignUp</h1>
         <div class={signup.infoSection}>
           <input
             type="text"
@@ -25,10 +25,15 @@ const Signup = () => {
             class={signup.inputBox}
           />
           <br />
-          <button class={signup.loginButton}>LOGIN</button>
-          <p>
-            Don't have an account? <span id={signup.signUpLink}>Sign Up</span>
-          </p>
+          <input
+            type="text"
+            id="repassword"
+            name="repassword"
+            placeholder="Confirm Password"
+            class={signup.inputBox}
+          />
+          <br />
+          <button class={signup.loginButton}>SIGN UP</button>
         </div>
       </div>
     </div>

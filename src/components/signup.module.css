@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  max-width: 70%;
+  margin: 5rem auto;
+}
+
+/*The right section*/
+
+.logInPortion {
+  background-color: #ead2ac;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  width: 80%;
+}
+
+#loginTitle {
+  margin-top: 5rem;
+  font-family: "Playfair Display", serif;
+  color: #9b7502;
+}
+
+.inputBox {
+  border: 0;
+  padding: 1rem;
+  margin: 1rem;
+  width: 70%;
+  border-radius: 5px;
+}
+
+.loginButton {
+  border: 0;
+  background-color: #9b7502;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+  margin: 1rem;
+}
+
+#signUpLink {
+  color: #9b7502;
+}
