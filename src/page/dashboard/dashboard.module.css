@@ -1,0 +1,29 @@
+.bottomPart {
+  display: flex;
+}
+
+.articlecontainer {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.articlePart {
+  background-color: #e5d5c5;
+  border-radius: 25px;
+  display: flex;
+}
+
+#heading {
+  text-align: center;
+}
+
+.comingUp {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.dates {
+  background-color: #e5d5c5;
+  border-radius: 25px;
+  padding: 0.5rem;
+}
