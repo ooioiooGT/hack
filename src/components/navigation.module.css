@@ -30,3 +30,7 @@ h1 {
   width: 100%;
   background-color: #f5eedf;
 }
+
+.menuItems a {
+  text-decoration: none;
+}

@@ -5,7 +5,7 @@ export default function Banner({ title, body }) {
   return (
     <div className={banner.container}>
       <h4>{title}</h4>
-      <p>{body}</p>
+      <div>{body}</div>
     </div>
   );
 }

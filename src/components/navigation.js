@@ -1,6 +1,7 @@
 import { React } from "react";
 import nav from "./navigation.module.css";
 import logo from "./loginpage/logo.svg";
+import { Link } from "react-router-dom";
 
 function Navigation({ body }) {
   return (
@@ -14,9 +15,12 @@ function Navigation({ body }) {
           </h1>
         </div>
         <div class={nav.menuItems}>
-          <a class={nav.item} href="#section">
-            Home
-          </a>
+          <Link to="/Dashboard">
+            <a class={nav.item} href="#section">
+              Home
+            </a>
+          </Link>
+
           <a class={nav.item} href="#section">
             Grief Guidance
           </a>
@@ -26,9 +30,11 @@ function Navigation({ body }) {
           <a class={nav.item} href="#section">
             Resource Center
           </a>
-          <a class={nav.item} href="#section">
-            Memorials
-          </a>
+          <Link to="/MemorialPage">
+            <a class={nav.item} href="#section">
+              Memorials
+            </a>
+          </Link>
         </div>
       </div>
       <div class={nav.rightSection}>{body}</div>
