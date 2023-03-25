@@ -1,0 +1,65 @@
+.subContainer {
+  background-color: #ead2aca6;
+  width: 60%;
+  margin: 5% auto;
+  height: 77%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.subContainer h5 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #9b7502;
+  padding: 1rem;
+  margin: 0;
+}
+
+.topInput {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  grid-gap: 0;
+}
+
+input {
+  border: 0;
+  padding: 1rem;
+  margin: 1rem;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.buttoninput input {
+  width: 70%;
+  margin: 1rem auto;
+}
+
+.imageinput p {
+  padding: 0.5rem;
+  font-size: 1.5rems;
+}
+
+.submmitphoto {
+  background-color: white;
+  color: #9b7502;
+  border: 2px solid #9b7502;
+  width: 20%;
+  border-radius: 3px;
+  padding: 0.2rem 1rem;
+  margin: 0.3rem;
+}
+
+.submitdata {
+  border: 0;
+  background-color: #9b7502;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0.3rem;
+  width: 30%;
+  border: 2px solid #9b7502;
+}
