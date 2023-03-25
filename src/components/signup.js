@@ -1,20 +1,35 @@
-import React from "react";
+import {React, useRef} from "react";
 import Background from "./background";
-import signup from "./signup.module.css";
+import signupcss from "./signup.module.css";
+import {signup} from "../api/firebase";
 
 const Signup = () => {
+
+  const emailRef = useRef();
+  const passwordRef = useRef();
+
+  async function handleSingup(){
+    try{
+      await signup(emailRef.current.value, passwordRef.current.value)
+      console.log("scueess singin")
+    }catch{
+      alert("The user name aleary exist! ")
+    }
+    
+  }
   return (
-    <div class={signup.container}>
+    <div class={signupcss.container}>
       <Background />
-      <div class={signup.logInPortion}>
-        <h1 id={signup.loginTitle}>SignUp</h1>
-        <div class={signup.infoSection}>
+      <div class={signupcss.logInPortion}>
+        <h1 id={signupcss.loginTitle}>SignUp</h1>
+        <div class={signupcss.infoSection}>
           <input
+            ref={emailRef}
             type="text"
             id="email"
             name="email"
             placeholder="Email"
-            class={signup.inputBox}
+            class={signupcss.inputBox}
           />
           <br />
           <input
@@ -22,18 +37,19 @@ const Signup = () => {
             id="password"
             name="password"
             placeholder="Password"
-            class={signup.inputBox}
+            class={signupcss.inputBox}
           />
           <br />
           <input
+            ref={passwordRef}
             type="text"
             id="repassword"
             name="repassword"
             placeholder="Confirm Password"
-            class={signup.inputBox}
+            class={signupcss.inputBox}
           />
           <br />
-          <button class={signup.loginButton}>SIGN UP</button>
+          <button class={signupcss.loginButton} onClick={handleSingup}>SIGN UP</button>
         </div>
       </div>
     </div>
