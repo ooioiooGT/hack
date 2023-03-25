@@ -1,0 +1,58 @@
+.container {
+  background-color: #f6eedf;
+  width: 40%;
+  margin: 5rem auto;
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.textContainer {
+  color: #9b7502;
+}
+
+.textContainer .paragraph {
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.textContainer div {
+  font-family: "Montserrat", sans-serif;
+}
+
+.buttonContainer button {
+  border: 0;
+  background-color: #9b7502;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  margin: 1rem;
+  width: 20%;
+  border: 2px solid #9b7502;
+}
+
+#first {
+  background-color: white;
+  color: #9b7502;
+  border: 2px solid #9b7502;
+}
+
+/*2nd modal*/
+.yes {
+  margin-right: 2rem;
+}
+
+/*third modal*/
+#name {
+  border: 0;
+  padding: 1rem;
+  margin: 1rem;
+  width: 70%;
+  border-radius: 5px;
+}
+
+/*fourth modal*/
+#extra {
+  margin-top: 3rem;
+}

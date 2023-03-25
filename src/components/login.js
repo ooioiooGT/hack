@@ -1,22 +1,23 @@
-import {React, useRef} from "react";
+import { React, useRef } from "react";
 import Background from "./background";
 import { Link } from "react-router-dom";
 import logincss from "./login.module.css";
 import { login } from "../api/firebase";
-
+import { Navigate } from "react-router-dom";
 
 const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
+
 
   async function hadleLogin(){
     try{
       await login(emailRef.current.value, passwordRef.current.value)
       console.log("scueess login")
     }catch{
-      alert("Please sign up!")
+      alert("password wrong or not singup yet!")
+
     }
-    
   }
 
   return (
@@ -43,14 +44,16 @@ const Login = () => {
             class={logincss.inputBox}
           />
           <br />
-          <button class={logincss.loginButton} onClick={hadleLogin}>LOGIN</button>
-          <p>
 
+          <button class={logincss.loginButton} onClick={hadleLogin}>
+            LOGIN
+          </button>
+
+          <p>
             Don't have an account?{" "}
             <Link to="/Signup">
               <span id={login.signUpLink}>Sign Up</span>
             </Link>
-
           </p>
         </div>
       </div>
