@@ -4,6 +4,8 @@ import Navigation from "../../components/navigation";
 import Banner from "../../components/topbanner";
 import dash from "./dashboard.module.css";
 import articleImage from "./articleimage.svg";
+import Memorycard from "../rememberance/memerycard";
+import memoryimg from "../rememberance/placeholder.svg";
 
 export default function Dashboard() {
   return (
@@ -12,14 +14,40 @@ export default function Dashboard() {
         body={
           <div>
             <div>
-              <Banner />
+              <Banner
+                title="Welcome!"
+                body='"When someone you love becomes a memory, the memory becomes a treasure"'
+              />
             </div>
-            <div></div>
+            <div class={dash.memorials}>
+              <p>Memorials</p>
+              <div class={dash.memories}>
+                <Memorycard
+                  class={dash.eachItem}
+                  imageurl={memoryimg}
+                  name="Name of Person"
+                  comment='"Quote from the Person"'
+                />
+                <Memorycard
+                  class={dash.eachItem}
+                  imageurl={memoryimg}
+                  name="Name of Person"
+                  comment='"Quote from the Person"'
+                />
+                <Memorycard
+                  class={dash.eachItem}
+                  imageurl={memoryimg}
+                  name="Name of Person"
+                  comment='"Quote from the Person"'
+                />
+              </div>
+            </div>
+
             <div class={dash.bottomPart}>
               <div class={dash.articlecontainer}>
                 <p id={dash.heading}>Article of the Day</p>
                 <div class={dash.articlePart}>
-                  <img src={articleImage} />
+                  <img src={articleImage} id={dash.img} />
                   <div class={dash.info}>
                     <h2>Understanding Grief</h2>
                     <p>

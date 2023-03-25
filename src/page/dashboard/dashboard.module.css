@@ -1,3 +1,10 @@
+p {
+  font-size: 12px;
+}
+h2 {
+  font-size: 15px;
+}
+
 .bottomPart {
   display: flex;
 }
@@ -13,6 +20,10 @@
   display: flex;
 }
 
+#img {
+  width: 30%;
+}
+
 #heading {
   text-align: center;
 }
@@ -26,4 +37,16 @@
   background-color: #e5d5c5;
   border-radius: 25px;
   padding: 0.5rem;
+}
+
+/*Memory cards area*/
+.memories {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.memorials {
+  text-align: center;
 }
