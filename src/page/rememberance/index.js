@@ -9,7 +9,17 @@ import {db} from "../../api/firebase";
 
 
 function rememberance() {
+  var user = JSON.parse(localStorage.getItem('user'))
+  db.collection('users').doc(user.uid).collection('relatives').get()
+  .then((querySnapshot) => {
+    // Loop through the query snapshot and retrieve the relevant fields for each user
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      const name = data.name;
+      console.log(name)
 
+    });
+  })
   return (
     <Navigation 
      body={
@@ -32,7 +42,7 @@ function rememberance() {
         <div className={Memcss.cardcontainer}>
             <Memerycard 
                 imageurl={Placeimage}
-                name = {""}
+                name = {name}
                 comment = {"sweet girl"}
 
             />

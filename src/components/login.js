@@ -13,9 +13,10 @@ const Login = () => {
 
   async function hadleLogin(){
     try{
-      await login(emailRef.current.value, passwordRef.current.value)
+      const cred = await login(emailRef.current.value, passwordRef.current.value)
       console.log("scueess login")
       setAuthentication(true);
+      localStorage.setItem("user",JSON.stringify({"email": cred.user.email, "uid": cred.user.uid}))
     }catch{
       alert("password wrong or not singup yet!")
 
