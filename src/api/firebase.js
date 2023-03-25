@@ -1,6 +1,8 @@
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 import {initializeApp} from "firebase/app";
 import { getAuth, signOut, signInWithEmailAndPassword , createUserWithEmailAndPassword } from "firebase/auth";
-import { getFirestore} from "firebase/firestore";
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyCYXMhcQedHpSgY0LHpyAYhygN2SFmIqus",
@@ -12,9 +14,9 @@ const firebaseConfig = {
     measurementId: "G-GXF4JFX79M"
   };
 
-const app = initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig)
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+export const db = firebase.firestore();
 
 
 export function logout(){

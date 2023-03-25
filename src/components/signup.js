@@ -16,8 +16,8 @@ const Signup = () => {
 
   async function handleSingup(){
     try{
-      await signup(emailRef.current.value, passwordRef.current.value).then(cred => {
-        return db.collection('users').doc(cred.user.uid)})
+      const cred = await signup(emailRef.current.value, passwordRef.current.value)
+      db.collection('users').doc(cred.user.uid).set({email:cred.user.email})
       console.log("success signing up")
     }catch{
       alert("The username already exists!")
