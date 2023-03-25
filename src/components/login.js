@@ -14,7 +14,7 @@ const Login = () => {
       await login(emailRef.current.value, passwordRef.current.value)
       console.log("scueess login")
     }catch{
-      alert("Please sign up!")
+      alert("password wrong or not singup yet!")
     }
     
   }
