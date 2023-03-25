@@ -20,7 +20,7 @@ const Signup = () => {
       try{
         const cred = await signup(emailRef.current.value, passwordRef.current.value)
         db.collection('users').doc(cred.user.uid).set({email:cred.user.email})
-        console.log("success signing up"))
+        console.log("success signing up")
       }catch{
         alert("The user name aleary exist! ")
       }
