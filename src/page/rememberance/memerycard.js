@@ -4,8 +4,8 @@ import card from "./card.module.css";
 function Memorycard({ imageurl, name, comment }) {
   return (
     <div className={card.container}>
-      <div className="people-image">
-        <img src={imageurl} alt="" placeholder=""></img>
+      <div className={card.peopleimage}>
+        <img class={card.imge}src={imageurl} alt="" placeholder=""></img>
       </div>
       <div className={card.name}>
         <h2> {name} </h2>
