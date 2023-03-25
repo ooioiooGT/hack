@@ -36,7 +36,7 @@ function Navbar() {
             <h2>Admin</h2>
           </MenuItem>
 
-          <MenuItem component={<Link to="/Home" />} icon={<HomeOutlinedIcon />}>
+          <MenuItem component={<Link style={{ color: green[500]}} to="/Home" />} icon={<HomeOutlinedIcon />}>
             Home
           </MenuItem>
           <MenuItem component={<Link to="/Grief" />} icon={<FavoriteIcon />}>
@@ -48,6 +48,7 @@ function Navbar() {
           >
             Grief Journal
           </MenuItem>
+
           <MenuItem
             component={<Link to="/Community" />}
             icon={<PeopleAltIcon />}

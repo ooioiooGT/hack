@@ -1,6 +1,6 @@
 .overall {
   display: grid;
-  grid-template-columns: 0.8fr 4fr;
+  grid-template-columns: 1.3fr 4fr;
 }
 
 .container {
@@ -12,6 +12,7 @@
 
 .menuItems {
   display: flex;
+  
   flex-direction: column;
 }
 
@@ -21,9 +22,13 @@ h1 {
 
 /*nav items*/
 .item {
+  
   text-decoration: none;
   padding: 1rem;
   text-align: left;
+  align-items: center;
+  color: #7e6004;
+  font-weight: bold;
 }
 
 .rightSection {
@@ -31,6 +36,29 @@ h1 {
   background-color: #f5eedf;
 }
 
+
 .menuItems a {
   text-decoration: none;
+  padding: 30px 50px;
+  
+   
 }
+
+.menuItems a:hover {
+  background-color: white;
+}
+
+.menuItems a:active {
+  background-color: white;
+}
+
+.logo{
+  text-align: center;
+  margin: 70px 0;
+  font-family: "Playfair Display", serif;
+}
+
+#ease {
+  color: #9b7502;
+}
+
