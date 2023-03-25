@@ -1,5 +1,6 @@
 import {React, useRef} from "react";
 import Background from "./background";
+import { Link } from "react-router-dom";
 import logincss from "./login.module.css";
 import { login } from "../api/firebase";
 
@@ -44,7 +45,12 @@ const Login = () => {
           <br />
           <button class={logincss.loginButton} onClick={hadleLogin}>LOGIN</button>
           <p>
-            Don't have an account? <span id={logincss.signUpLink}>Sign Up</span>
+
+            Don't have an account?{" "}
+            <Link to="/Signup">
+              <span id={login.signUpLink}>Sign Up</span>
+            </Link>
+
           </p>
         </div>
       </div>
