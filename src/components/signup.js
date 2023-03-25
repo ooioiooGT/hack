@@ -7,13 +7,19 @@ const Signup = () => {
 
   const emailRef = useRef();
   const passwordRef = useRef();
+  const password2Ref = useRef();
 
   async function handleSingup(){
-    try{
-      await signup(emailRef.current.value, passwordRef.current.value)
-      console.log("scueess singin")
-    }catch{
-      alert("The user name aleary exist! ")
+    if (password2Ref.current.value === passwordRef.current.value){
+      try{
+        await signup(emailRef.current.value, passwordRef.current.value)
+        console.log("scueess singin")
+      }catch{
+        alert("The user name aleary exist! ")
+      }
+    }
+    else {
+      alert(" The password not match")
     }
     
   }
@@ -33,6 +39,7 @@ const Signup = () => {
           />
           <br />
           <input
+            ref={password2Ref}
             type="text"
             id="password"
             name="password"
