@@ -6,64 +6,62 @@ import { login } from "../api/firebase";
 import { Navigate } from "react-router-dom";
 
 const Login = () => {
-  const [authentication, setAuthentication] = useState(false); 
+  const [authentication, setAuthentication] = useState(false);
   const emailRef = useRef();
   const passwordRef = useRef();
 
-
-  async function hadleLogin(){
-    try{
-      await login(emailRef.current.value, passwordRef.current.value)
-      console.log("scueess login")
+  async function hadleLogin() {
+    try {
+      await login(emailRef.current.value, passwordRef.current.value);
+      console.log("scueess login");
       setAuthentication(true);
-    }catch{
-      alert("password wrong or not singup yet!")
-
+    } catch {
+      alert("password wrong or not singup yet!");
     }
   }
-if (!authentication){
-  return (
-    <div class={logincss.container}>
-      <Background />
-      <div class={logincss.logInPortion}>
-        <h1 id={logincss.loginTitle}>Login</h1>
-        <div class={logincss.infoSection}>
-          <input
-            ref={emailRef}
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Email"
-            class={logincss.inputBox}
-          />
-          <br />
-          <input
-            ref={passwordRef}
-            type="text"
-            id="password"
-            name="password"
-            placeholder="Password"
-            class={logincss.inputBox}
-          />
-          <br />
+  if (!authentication) {
+    return (
+      <div class={logincss.container}>
+        <Background />
+        <div class={logincss.logInPortion}>
+          <h1 id={logincss.loginTitle}>Login</h1>
+          <div class={logincss.infoSection}>
+            <input
+              ref={emailRef}
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email"
+              class={logincss.inputBox}
+            />
+            <br />
+            <input
+              ref={passwordRef}
+              type="text"
+              id="password"
+              name="password"
+              placeholder="Password"
+              class={logincss.inputBox}
+            />
+            <br />
 
-          <button class={logincss.loginButton} onClick={hadleLogin}>
-            LOGIN
-          </button>
+            <button class={logincss.loginButton} onClick={hadleLogin}>
+              LOGIN
+            </button>
 
-          <p>
-            Don't have an account?{" "}
-            <Link to="/Signup">
-              <span id={login.signUpLink}>Sign Up</span>
-            </Link>
-          </p>
+            <p>
+              Don't have an account?{" "}
+              <Link to="/Signup">
+                <span id={login.signUpLink}>Sign Up</span>
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}else{
-  return <Navigate to='/ModalFirst' />
-}
+    );
+  } else {
+    return <Navigate to="/ModalFirst" />;
+  }
 };
 
 export default Login;

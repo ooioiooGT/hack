@@ -6,7 +6,6 @@ import { async } from "@firebase/util";
 import { Link } from "react-router-dom";
 
 
-
 function Navigation({ body }) {
 
   async function handleLogout(){
@@ -28,9 +27,12 @@ function Navigation({ body }) {
           </h1>
         </div>
         <div class={nav.menuItems}>
-          <a class={nav.item} href="#section">
-            Home
-          </a>
+          <Link to="/Dashboard">
+            <a class={nav.item} href="#section">
+              Home
+            </a>
+          </Link>
+
           <a class={nav.item} href="#section">
             Grief Guidance
           </a>
@@ -40,11 +42,14 @@ function Navigation({ body }) {
           <a class={nav.item} href="#section">
             Resource Center
           </a>
-          <a class={nav.item} href="#section">
-            Memorials
-          </a>
+
+          <Link to="/MemorialPage">
+            <a class={nav.item} href="#section">
+              Memorials
+            </a>
           <Link to="/">
           <button onClick={handleLogout}>Log Out </button>
+
           </Link>
         </div>
       </div>
