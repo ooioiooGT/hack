@@ -1,4 +1,4 @@
-import { React, useRef } from "react";
+import { React, useRef, useState } from "react";
 import Background from "./background";
 import { Link } from "react-router-dom";
 import logincss from "./login.module.css";
@@ -6,6 +6,7 @@ import { login } from "../api/firebase";
 import { Navigate } from "react-router-dom";
 
 const Login = () => {
+  const [authentication, setAuthentication] = useState(false); 
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -14,12 +15,13 @@ const Login = () => {
     try{
       await login(emailRef.current.value, passwordRef.current.value)
       console.log("scueess login")
+      setAuthentication(true);
     }catch{
       alert("password wrong or not singup yet!")
 
     }
   }
-
+if (!authentication){
   return (
     <div class={logincss.container}>
       <Background />
@@ -59,6 +61,9 @@ const Login = () => {
       </div>
     </div>
   );
+}else{
+  return <Navigate to='/ModalFirst' />
+}
 };
 
 export default Login;
