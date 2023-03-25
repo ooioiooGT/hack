@@ -1,0 +1,68 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.SignInContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  width: 80%;
+}
+
+/*The left section*/
+
+.signUp {
+  background-color: #f6eedf;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  text-align: center;
+  height: 100%;
+}
+
+#girl {
+  width: 70%;
+}
+
+.logoHeading {
+  margin-top: 2rem;
+  display: flex;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#ease {
+  color: #9b7502;
+}
+
+#heal {
+  color: #c2aa77;
+}
+
+#healLogo {
+  width: 12%;
+}
+
+#paraSection {
+  margin-top: -30px;
+  text-align: left;
+  padding-left: 6.5rem;
+}
+
+#gentle {
+  color: #9b7502;
+}
+
+#grieve {
+  color: #9b7502;
+}
+
+/*right section*/
+
+.rightPortion {
+  background-color: #ead2ac;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
