@@ -1,8 +1,12 @@
+import { AlarmTwoTone } from "@mui/icons-material";
 import React from "react";
 import Navigation from "../../components/navigation";
 import form from "./memorialform.module.css";
-
 const MemorialForm = () => {
+
+  async function handlesumited (){ 
+    alert("Thank you for your submition.")
+  }
   return (
     <div className={form.container}>
       <Navigation
@@ -80,7 +84,7 @@ const MemorialForm = () => {
                 <img src="" alt="" />
               </div>
             </div>
-            <button className={form.submitdata}>ADD NEW PERSON</button>
+            <button className={form.submitdata} onClick={handlesumited}>ADD NEW PERSON</button>
           </div>
         }
       />
