@@ -1,3 +1,8 @@
+.overall {
+  width: 80%;
+  margin: 0 auto;
+}
+
 p {
   font-size: 12px;
 }
@@ -10,12 +15,12 @@ h2 {
 }
 
 .articlecontainer {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
 }
 
 .articlePart {
-  background-color: #e5d5c5;
+  background-color: #efddcb;
   border-radius: 25px;
   display: flex;
 }
@@ -28,15 +33,34 @@ h2 {
   text-align: center;
 }
 
-.comingUp {
-  width: 30%;
-  margin: 0 auto;
-}
-
 .dates {
-  background-color: #e5d5c5;
+  background-color: #efddcb;
   border-radius: 25px;
   padding: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.dateDetails {
+  display: flex;
+  padding: 0;
+  margin: 1.4rem;
+}
+
+.round {
+  width: 1.5rem;
+}
+
+.dateColor {
+  color: #c2aa77;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  padding-left: 1rem;
+}
+.eventColor {
+  margin: 0;
+  padding-left: 1rem;
 }
 
 /*Memory cards area*/
@@ -49,4 +73,33 @@ h2 {
 
 .memorials {
   text-align: center;
+}
+
+.comingUp {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+}
+
+.littleHeader {
+  color: #9b7502;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/*articles*/
+.info {
+  margin-left: 1rem;
+}
+
+.info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+}
+
+#learnmore {
+  margin-top: 3rem;
+  color: #9b7502;
+  font-weight: bold;
 }

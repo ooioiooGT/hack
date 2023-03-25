@@ -4,8 +4,8 @@ p {
 }
 
 .container {
-  background-color: #ead2ac;
-  max-width: 15rem;
+  background-color: #f7e5c7;
+  width: 150px;
   border-radius: 20px;
   padding: 1rem;
   margin: 1rem !important;
