@@ -1,13 +1,15 @@
 import "./App.css";
 import React from "react";
 import Login from "./components/login";
-// import Modal from "./components/onboarding/modal";
-// import ModalDetail from "./components/onboarding/modalDetailThree";
+
+import Rememberance from "./page/rememberance";
+import Memerycard from "./page/rememberance/memerycard";
+
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <Rememberance />
     </div>
   );
 }

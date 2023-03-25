@@ -9,13 +9,14 @@ const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  async function hadleLogin() {
-    try {
-      await login(emailRef.current.value, passwordRef.current.value);
-      console.log("scueess login");
-      <Navigate replace to="/ModalFirst" />;
-    } catch {
-      alert("Please sign up!");
+
+  async function hadleLogin(){
+    try{
+      await login(emailRef.current.value, passwordRef.current.value)
+      console.log("scueess login")
+    }catch{
+      alert("password wrong or not singup yet!")
+
     }
   }
 
