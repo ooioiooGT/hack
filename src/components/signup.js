@@ -13,14 +13,20 @@ const Signup = () => {
 
   const emailRef = useRef();
   const passwordRef = useRef();
+  const password2Ref = useRef();
 
   async function handleSingup(){
-    try{
-      const cred = await signup(emailRef.current.value, passwordRef.current.value)
-      db.collection('users').doc(cred.user.uid).set({email:cred.user.email})
-      console.log("success signing up")
-    }catch{
-      alert("The username already exists!")
+    if (password2Ref.current.value === passwordRef.current.value){
+      try{
+        const cred = await signup(emailRef.current.value, passwordRef.current.value)
+        db.collection('users').doc(cred.user.uid).set({email:cred.user.email})
+        console.log("success signing up"))
+      }catch{
+        alert("The user name aleary exist! ")
+      }
+    }
+    else {
+      alert(" The password not match")
     }
     
   }
@@ -40,6 +46,7 @@ const Signup = () => {
           />
           <br />
           <input
+            ref={password2Ref}
             type="text"
             id="password"
             name="password"
