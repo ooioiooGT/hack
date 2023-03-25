@@ -1,6 +1,8 @@
 import "./App.css";
 import React from "react";
 import Login from "./components/login";
+// import Modal from "./components/onboarding/modal";
+// import ModalDetail from "./components/onboarding/modalDetailThree";
 
 function App() {
   return (
