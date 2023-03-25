@@ -1,7 +1,13 @@
-import {React, useRef} from "react";
+import {React, useRef, } from "react";
 import Background from "./background";
 import signupcss from "./signup.module.css";
-import {signup} from "../api/firebase";
+import {signup, db, auth} from "../api/firebase";
+
+
+auth.onAuthStateChanged(user => {
+  console.log(user);
+})
+
 
 const Signup = () => {
 
@@ -10,10 +16,11 @@ const Signup = () => {
 
   async function handleSingup(){
     try{
-      await signup(emailRef.current.value, passwordRef.current.value)
-      console.log("scueess singin")
+      await signup(emailRef.current.value, passwordRef.current.value).then(cred => {
+        return db.collection('users').doc(cred.user.uid)})
+      console.log("success signing up")
     }catch{
-      alert("The user name aleary exist! ")
+      alert("The username already exists!")
     }
     
   }
