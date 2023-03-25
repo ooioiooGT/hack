@@ -1,6 +1,6 @@
 .overall {
   display: grid;
-  grid-template-columns: 0.8fr 4fr;
+  grid-template-columns: 1fr 4fr;
 }
 
 .container {
@@ -8,10 +8,12 @@
   background-color: #ead2ac;
   height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
 .menuItems {
   display: flex;
+
   flex-direction: column;
 }
 
@@ -22,11 +24,48 @@ h1 {
 /*nav items*/
 .item {
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.2rem;
   text-align: left;
+  align-items: center;
+  color: #7e6004;
+  font-weight: bold;
+  margin: 0;
 }
 
 .rightSection {
   width: 100%;
   background-color: #f5eedf;
+}
+
+.menuItems a {
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.menuItems a:hover {
+  background-color: white;
+}
+
+.menuItems a:active {
+  background-color: white;
+}
+
+.logo {
+  text-align: center;
+  margin: 12% 0;
+  font-family: "Playfair Display", serif;
+}
+
+#ease {
+  color: #9b7502;
+}
+
+#heal {
+  color: #c2aa77;
+}
+
+.link {
+  margin: 0px;
+  padding: 0px;
+  vertical-align: middle;
 }

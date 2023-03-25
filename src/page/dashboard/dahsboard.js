@@ -7,6 +7,11 @@ import articleImage from "./articleimage.svg";
 import Memorycard from "../rememberance/memerycard";
 import memoryimg from "../rememberance/placeholder.svg";
 import {db} from "../../api/firebase";
+import circle from "./circle.svg";
+import elderly from "./elderly.svg";
+import elderly2 from "./elderly2.svg";
+import elderly3 from "./elderly3.svg";
+
 
 export default function Dashboard() {
   const [memorials, setMemorials] = useState([])
@@ -31,7 +36,7 @@ export default function Dashboard() {
     <div>
       <Navigation
         body={
-          <div>
+          <div class={dash.overall}>
             <div>
               <Banner
                 title="Welcome!"
@@ -39,7 +44,7 @@ export default function Dashboard() {
               />
             </div>
             <div class={dash.memorials}>
-              <p>Memorials</p>
+              <p class={dash.littleHeader}>Memorials</p>
               <div class={dash.memories}>
                 {memorials.map((memorial) => 
                 (<Memorycard
@@ -49,12 +54,32 @@ export default function Dashboard() {
                   comment={memorial.quote}
                 />))}
                 
+
+///                  imageurl={elderly}
+///                  name="Jovita Ceron"
+///                  comment="“A faithful woman”"
+///                />
+///                <Memorycard
+///                  class={dash.eachItem}
+///                  imageurl={elderly2}
+///                  name="Larae Murdock"
+///                  comment="“A spiritual woman”"
+///                />
+///                <Memorycard
+///                  class={dash.eachItem}
+///                  imageurl={elderly3}
+///                  name="Segundo Carazas"
+///                  comment="“A happy men”"
+///                />
+
               </div>
             </div>
 
             <div class={dash.bottomPart}>
               <div class={dash.articlecontainer}>
-                <p id={dash.heading}>Article of the Day</p>
+                <p id={dash.heading} class={dash.littleHeader}>
+                  Article of the Day
+                </p>
                 <div class={dash.articlePart}>
                   <img src={articleImage} id={dash.img} />
                   <div class={dash.info}>
@@ -65,24 +90,33 @@ export default function Dashboard() {
                       aftermath: grief, the natural reaction to loss of a loved
                       one.
                     </p>
-                    <p>LEARN MORE</p>
+                    <p id={dash.learnmore}>LEARN MORE</p>
                   </div>
                 </div>
               </div>
               <div class={dash.comingUp}>
-                <p>Memorable Dates</p>
+                <p class={dash.littleHeader}>Memorable Dates</p>
                 <div class={dash.dates}>
-                  <div>
-                    <p>Date</p>
-                    <p>Event</p>
+                  <div class={dash.dateDetails}>
+                    <img src={circle} class={dash.round} />
+                    <div>
+                      <p class={dash.dateColor}>Tuesday, Feb 10</p>
+                      <p class={dash.eventColor}>Carlos Escalona Birthday</p>
+                    </div>
                   </div>
-                  <div>
-                    <p>Date</p>
-                    <p>Event</p>
+                  <div class={dash.dateDetails}>
+                    <img src={circle} class={dash.round} />
+                    <div>
+                      <p class={dash.dateColor}>Tuesday, Feb 14</p>
+                      <p class={dash.eventColor}>Jovita’s Birthday</p>
+                    </div>
                   </div>
-                  <div>
-                    <p>Date</p>
-                    <p>Event</p>
+                  <div class={dash.dateDetails}>
+                    <img src={circle} class={dash.round} />
+                    <div>
+                      <p class={dash.dateColor}>Tuesday, Feb 10</p>
+                      <p class={dash.eventColor}>Larae’s Anniversary </p>
+                    </div>
                   </div>
                 </div>
               </div>

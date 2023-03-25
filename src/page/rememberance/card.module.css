@@ -3,12 +3,11 @@ p {
   font-size: 12px;
 }
 
-
 .container {
-  background-color: #e5d5c5;
-  max-width: 15rem;
+  background-color: #f7e5c7;
+  width: 150px;
   border-radius: 20px;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem !important;
   text-align: center;
 }

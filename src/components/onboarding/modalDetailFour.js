@@ -34,7 +34,7 @@ function Categories({
           body={
             <div>
               <input type="radio" value="happy" />
-              In Peace
+              At Peace
               <input type="radio" value="sad" /> Heartbroken
               <input type="radio" value="mad" /> Mad
             </div>

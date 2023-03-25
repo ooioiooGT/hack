@@ -9,6 +9,9 @@ import ModalThree from "./components/onboarding/modalDetailThree";
 import ModalFour from "./components/onboarding/modalDetailFour";
 import Modal from "./components/onboarding/modal";
 import Dashboard from "./page/dashboard/dahsboard";
+import Memorials from "../src/page/rememberance/memorials";
+import MemorialPage from "./page/rememberance/initialmemorial";
+import MemorialForm from "./page/rememberance/memorialform";
 
 export default function EaseHealRouter() {
   return (
@@ -24,6 +27,9 @@ export default function EaseHealRouter() {
         <Route path="/ModalThree" element={<ModalThree />} />
         <Route path="/ModalFour" element={<ModalFour />} />
         <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Memorials" element={<Memorials />} />
+        <Route path="/MemorialPage" element={<MemorialPage />} />
+        <Route path="/MemorialForm" element={<MemorialForm />} />
       </Routes>
     </Router>
   );
