@@ -3,8 +3,7 @@ import Modal from "./modal";
 import modaldetail from "./modaldetail.module.css";
 import image1 from "./image1.svg";
 
-function Categories({ title, imageurl, body, alt, first, second,back,
-  next, }) {
+function Categories({ title, imageurl, body, alt, first, second, back, next }) {
   return (
     <div className="categories">
       <div className="cards-container">
@@ -16,7 +15,7 @@ function Categories({ title, imageurl, body, alt, first, second,back,
           alt="Peaceful Lady"
           first="Dashboard"
           second="Next"
-          back="/ModalFirst"
+          back="/Dashboard"
           next="/ModalSec"
         />
       </div>
