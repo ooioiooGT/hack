@@ -1,7 +1,8 @@
-import {React, useRef, } from "react";
+import {React, useRef, useState } from "react";
 import Background from "./background";
 import signupcss from "./signup.module.css";
 import {signup, db, auth} from "../api/firebase";
+import { Navigate } from "react-router-dom";
 
 
 auth.onAuthStateChanged(user => {
@@ -10,18 +11,20 @@ auth.onAuthStateChanged(user => {
 
 
 const Signup = () => {
-
+  const [authentication, setAuthentication] = useState(false);
   const emailRef = useRef();
   const passwordRef = useRef();
   const password2Ref = useRef();
 
   async function handleSingup(){
+   
     if (password2Ref.current.value === passwordRef.current.value){
       try{
         const cred = await signup(emailRef.current.value, passwordRef.current.value)
         db.collection('users').doc(cred.user.uid).set({email:cred.user.email})
         console.log("success signing up")
         localStorage.setItem("user",JSON.stringify({"email": cred.user.email, "uid": cred.user.uid}))
+        setAuthentication(true);
       }catch{
         alert("The user name aleary exist! ")
       }
@@ -31,6 +34,7 @@ const Signup = () => {
     }
     
   }
+  if (!authentication) {
   return (
     <div class={signupcss.container}>
       <Background />
@@ -69,6 +73,9 @@ const Signup = () => {
       </div>
     </div>
   );
+  }else{
+    return <Navigate to="/ModalFirst" />;
+  }
 };
 
 export default Signup;

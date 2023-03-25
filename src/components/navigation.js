@@ -2,7 +2,6 @@ import { React } from "react";
 import nav from "./navigation.module.css";
 import logo from "./loginpage/logo.svg";
 import { logout } from "../api/firebase";
-import { async } from "@firebase/util";
 import { Link } from "react-router-dom";
 
 function Navigation({ body }) {
