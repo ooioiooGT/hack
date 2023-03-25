@@ -1,7 +1,13 @@
-import {React, useRef} from "react";
+import {React, useRef, } from "react";
 import Background from "./background";
 import signupcss from "./signup.module.css";
-import {signup} from "../api/firebase";
+import {signup, db, auth} from "../api/firebase";
+
+
+auth.onAuthStateChanged(user => {
+  console.log(user);
+})
+
 
 const Signup = () => {
 
@@ -12,8 +18,10 @@ const Signup = () => {
   async function handleSingup(){
     if (password2Ref.current.value === passwordRef.current.value){
       try{
-        await signup(emailRef.current.value, passwordRef.current.value)
-        console.log("scueess singin")
+        const cred = await signup(emailRef.current.value, passwordRef.current.value)
+        db.collection('users').doc(cred.user.uid).set({email:cred.user.email})
+        console.log("success signing up")
+        localStorage.setItem("user",JSON.stringify({"email": cred.user.email, "uid": cred.user.uid}))
       }catch{
         alert("The user name aleary exist! ")
       }
