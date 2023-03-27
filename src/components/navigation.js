@@ -38,7 +38,7 @@ function Navigation({ body }) {
               Home
             </a>
           </Link>
-          <Link to="#">
+          <Link to="/Grief">
             <FavoriteIcon style={{ color: "7e6004" }} />
 
             <a class={nav.item} href="#section">
@@ -46,7 +46,7 @@ function Navigation({ body }) {
             </a>
           </Link>
 
-          <Link to="#">
+          <Link to="/Journal">
             <DriveFileRenameOutlineIcon style={{ color: "7e6004" }} />
 
             <a class={nav.item} href="#section">
@@ -54,7 +54,7 @@ function Navigation({ body }) {
             </a>
           </Link>
 
-          <Link to="#">
+          <Link to="/Community">
             <PeopleAltIcon style={{ color: "7e6004" }} />
 
             <a class={nav.item} href="#section">
@@ -69,7 +69,7 @@ function Navigation({ body }) {
             </a>
           </Link>
 
-          <Link to="#">
+          <Link to="/Resources">
             <ArticleIcon style={{ color: "7e6004" }} />
 
             <a class={nav.item} href="#section">

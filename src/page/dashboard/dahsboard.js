@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 // import Navbar from "../../components/navbar/Navbar";
 import Navigation from "../../components/navigation";
 import Banner from "../../components/topbanner";
@@ -6,32 +6,34 @@ import dash from "./dashboard.module.css";
 import articleImage from "./articleimage.svg";
 import Memorycard from "../rememberance/memerycard";
 import memoryimg from "../rememberance/placeholder.svg";
-import {db} from "../../api/firebase";
+import { db } from "../../api/firebase";
 import circle from "./circle.svg";
 import elderly from "./elderly.svg";
 import elderly2 from "./elderly2.svg";
 import elderly3 from "./elderly3.svg";
 
-
 export default function Dashboard() {
-  const [memorials, setMemorials] = useState([])
-  const loaded = useRef(false)
-  var user = JSON.parse(localStorage.getItem('user'))
-  useEffect (()=> {
-    if(!loaded.current){
-    const memorialArray = []
-    db.collection('users').doc(user.uid).collection('relatives').get()
-  .then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      const data = doc.data();
-      memorialArray.push({name: data.name, quote: data.quote})
-      // console.log(data.name)
-    });
-    setMemorials(memorialArray);
-    
-  })}
-  loaded.current = true;
-}, [] )
+  const [memorials, setMemorials] = useState([]);
+  const loaded = useRef(false);
+  var user = JSON.parse(localStorage.getItem("user"));
+  useEffect(() => {
+    if (!loaded.current) {
+      const memorialArray = [];
+      db.collection("users")
+        .doc(user.uid)
+        .collection("relatives")
+        .get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            memorialArray.push({ name: data.name, quote: data.quote });
+            // console.log(data.name)
+          });
+          setMemorials(memorialArray);
+        });
+    }
+    loaded.current = true;
+  }, []);
   return (
     <div>
       <Navigation
@@ -46,16 +48,34 @@ export default function Dashboard() {
             <div class={dash.memorials}>
               <p class={dash.littleHeader}>Memorials</p>
               <div class={dash.memories}>
-                {memorials.map((memorial) => 
-                (<Memorycard
+                {memorials.map((memorial) => (
+                  <Memorycard
+                    class={dash.eachItem}
+                    imageurl={memoryimg}
+                    name={memorial.name}
+                    comment={memorial.quote}
+                  />
+                ))}
+                <Memorycard
+                  class={dash.eachItem}
+                  imageurl={elderly}
+                  name="Jovita Ceron"
+                  comment="“A faithful woman”"
+                />
+                <Memorycard
+                  class={dash.eachItem}
+                  imageurl={elderly2}
+                  name="Larae Murdock"
+                  comment="“A spiritual woman”"
+                />{" "}
+                {/* <Memorycard
                   class={dash.eachItem}
                   imageurl={memoryimg}
                   name= {memorial.name}
                   comment={memorial.quote}
-                />))}
+                />))} */}
                 
-                {/* <Memorycard
-                  class={dash.eachItem}
+{/* 
                   imageurl={elderly}
                   name="Jovita Ceron"
                   comment="“A faithful woman”"

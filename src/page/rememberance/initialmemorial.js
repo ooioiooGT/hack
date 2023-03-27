@@ -12,7 +12,7 @@ const MemorialPage = () => {
     <div class={memorial.container}>
       <Navigation
         body={
-          <div class={memorial.container}>
+          <div class={memorial.subcontainer}>
             <span class={memorial.user}>
               <img src={flower} />
             </span>

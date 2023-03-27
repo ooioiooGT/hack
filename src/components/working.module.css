@@ -1,0 +1,19 @@
+.working {
+  width: 50%;
+  margin: 10% auto;
+  height: 50%;
+  background-color: #ead2aca6;
+  border-radius: 20px;
+  font-size: 2rem;
+  text-align: center;
+  padding: 3rem;
+}
+
+.working img {
+  width: 20%;
+}
+
+.working p {
+  padding: 0;
+  font-size: 1.8rem;
+}

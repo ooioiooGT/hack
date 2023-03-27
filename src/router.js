@@ -12,6 +12,10 @@ import Dashboard from "./page/dashboard/dahsboard";
 import Memorials from "../src/page/rememberance/memorials";
 import MemorialPage from "./page/rememberance/initialmemorial";
 import MemorialForm from "./page/rememberance/memorialform";
+import Grief from "./components/griefguidance";
+import Journal from "./components/chiefjournal";
+import Community from "./components/community";
+import Resources from "./components/resources";
 
 export default function EaseHealRouter() {
   return (
@@ -30,6 +34,10 @@ export default function EaseHealRouter() {
         <Route path="/Memorials" element={<Memorials />} />
         <Route path="/MemorialPage" element={<MemorialPage />} />
         <Route path="/MemorialForm" element={<MemorialForm />} />
+        <Route path="/Grief" element={<Grief />} />
+        <Route path="/Journal" element={<Journal />} />
+        <Route path="/Community" element={<Community />} />
+        <Route path="/Resources" element={<Resources />} />
       </Routes>
     </Router>
   );
